@@ -14,8 +14,7 @@ def github_stargazers(context):
         context.resources.github_api.get_repo(
             "dagster-io/dagster").get_stargazers_with_dates()
     )
-
-
+    
 @asset
 def github_stargazers_by_week(github_stargazers):
     df = pd.DataFrame(
