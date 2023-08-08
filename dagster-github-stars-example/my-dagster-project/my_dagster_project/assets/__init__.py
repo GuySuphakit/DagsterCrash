@@ -8,8 +8,6 @@ from datetime import timedelta
 from dagster import asset
 from github import Github
 
-ACCESS_TOKEN = "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"
-
 @asset(required_resource_keys={"github_api"})
 def github_stargazers(context):
     return list(
